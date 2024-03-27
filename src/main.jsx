@@ -7,13 +7,26 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Root from './components/Root/Root';
+import Home from './components/Home/Home';
+import ListedToPage from './components/ListedToPage/ListedToPage';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div className='text-7xl'>hello world
-    <button className="btn btn-secondary">Secondary</button></div>
+    element: <Root></Root>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/listed-to-page',
+        element: <ListedToPage></ListedToPage>
+      }
+      
+    ]
   }
 ])
 
