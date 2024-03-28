@@ -16,7 +16,7 @@ const Books = () => {<div className="card w-96 bg-base-100 shadow-xl">
 </div>
 
     const [books , setBooks] = useState([])
-    console.log(books)
+    // console.log(books)
 
     useEffect(() => {
         fetch('books.json')
