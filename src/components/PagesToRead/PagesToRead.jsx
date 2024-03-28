@@ -112,7 +112,7 @@ const PagesToRead = () => {
 
 
             <BarChart
-                width={600}
+                width={700}
                 height={500}
                 data={booksListed}
                 margin={{
@@ -123,7 +123,7 @@ const PagesToRead = () => {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
+                <XAxis dataKey="author" />
                 <YAxis />
                 <Bar dataKey="totalPages">
                 

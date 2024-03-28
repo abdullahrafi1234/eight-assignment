@@ -21,10 +21,10 @@ const BookDetails = () => {
             toast('Read Added Successfully')
         }
     
-        // const handleWishlist = () => {
-        //     saveWishlistBookApplication(bookIdInt)
-        //     toast('Wishlist Added Successfully')
-        // }
+        const handleWishlist = () => {
+            saveBookApplication(bookId)
+            toast('Wishlist Added Successfully')
+        }
     
 
     return (
@@ -58,7 +58,7 @@ const BookDetails = () => {
 
                     <div className="py-8 space-x-3 lg:space-x-6">
                         <button onClick={handleRead} className="btn btn-outline btn-accent font-bold">Read</button>
-                        <button onClick={handleRead} className="btn btn-info text-white font-bold">Wishlist</button>
+                        <button onClick={handleWishlist} className="btn btn-info text-white font-bold">Wishlist</button>
                     </div>
 
                     
