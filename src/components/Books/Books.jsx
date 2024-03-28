@@ -26,7 +26,7 @@ const Books = () => {<div className="card w-96 bg-base-100 shadow-xl">
     return (
         <div>
             <div className="p-12 pt-20">
-                <h3 className="font-bold text-4xl text-center">Books: {books.length}</h3>
+                <h3 className="font-bold text-4xl text-center">Books</h3>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

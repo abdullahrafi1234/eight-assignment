@@ -12,7 +12,7 @@ const Header = () => {
         } to="/books">Books</NavLink></li>
 
         <li><NavLink className={({ isActive }) => isActive ? 'btn btn-outline btn-success font-bold' : 'btn btn-ghost'
-        } to="/listed">Listed Books</NavLink></li>
+        } to="/listed-to-page">Listed Books</NavLink></li>
 
         <li><NavLink className={({ isActive }) => isActive ? 'btn btn-outline btn-success font-bold' : 'btn btn-ghost'
         } to="/pages-to-read">Pages to Read</NavLink></li>
