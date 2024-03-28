@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
-import { getStoredBookApplication } from "../Utility/Utility";
+import { getStoredBookApplication, } from "../Utility/Utility";
 
 
 
@@ -33,7 +33,7 @@ const ListedToPage = () => {
     }, [books])
     return (
         <div className="mt-8">
-            <h2 className="text-4xl text-center bg-base-200 py-6 rounded-xl font-bold">Books: {booksListed.length}</h2>
+            <h2 className="text-4xl text-center bg-base-200 py-6 rounded-xl font-bold">Books</h2>
             {/* <div>
                 {
                     booksListed.map(book => <li key={book.bookId}>{book.bookName}</li>)
@@ -44,8 +44,9 @@ const ListedToPage = () => {
                 <details className="dropdown">
                     <summary className="m-1 btn bg-[#23BE0A] text-white font-bold">Sort By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li><Link>Item 1</Link></li>
-                        <li><Link>Item 2</Link></li>
+                        <li><Link>Rating</Link></li>
+                        <li><Link>Number of Pages</Link></li>
+                        <li><Link>Published Year</Link></li>
                     </ul>
                 </details>
             </div>

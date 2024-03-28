@@ -11,7 +11,7 @@ const ViewReadBooks = ({ book }) => {
     return (
         <div className="my-5">
 
-            <div className="hero  justify-between p-4 pl-8 border rounded-lg">
+            <div className="hero  justify-between p-4 pl-2 lg:pl-8 border-y lg:border rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="bg-base-200 px-10 py-10 rounded-lg">
                         <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
@@ -41,7 +41,7 @@ const ViewReadBooks = ({ book }) => {
                             </p>
                         </div>
 
-                        <div className="flex py-4 gap-4">
+                        <div className="flex py-2 lg:py-4 lg:gap-4">
                             <p className="text-[#328EFF] px-6 py-2.5 font-medium bg-[#328EFF26] rounded-full">Category: {category}</p>
                             <p className="text-[#FFAC33] px-6 py-2.5 font-medium bg-[#FFAC3326] rounded-full">Rating:{rating}</p>
                             <Link to={`/book/${bookId}`}>

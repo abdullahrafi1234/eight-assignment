@@ -15,12 +15,17 @@ const BookDetails = () => {
     // console.log(book)
     const { author, bookName, category, image, tags, rating, review, totalPages, publisher, yearOfPublishing
     } = book;
-
-    const handleRead = () => {
-        saveBookApplication(bookIdInt)
-        toast('Read Added Successfully')
-    }
-
+    
+        const handleRead = () => {
+            saveBookApplication(bookIdInt)
+            toast('Read Added Successfully')
+        }
+    
+        // const handleWishlist = () => {
+        //     saveWishlistBookApplication(bookIdInt)
+        //     toast('Wishlist Added Successfully')
+        // }
+    
 
     return (
         <div className="mt-8">
@@ -53,7 +58,7 @@ const BookDetails = () => {
 
                     <div className="py-8 space-x-3 lg:space-x-6">
                         <button onClick={handleRead} className="btn btn-outline btn-accent font-bold">Read</button>
-                        <button className="btn btn-info text-white font-bold">Wishlist</button>
+                        <button onClick={handleRead} className="btn btn-info text-white font-bold">Wishlist</button>
                     </div>
 
                     
