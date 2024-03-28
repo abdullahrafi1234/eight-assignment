@@ -3,6 +3,7 @@ import { Link, Outlet, useLoaderData } from "react-router-dom";
 import { getStoredBookApplication } from "../Utility/Utility";
 
 
+
 const ListedToPage = () => {
 
     const [tabIndex, setTabIndex] = useState(0)
@@ -29,10 +30,15 @@ const ListedToPage = () => {
 
             //     console.log(books, storedBookIds,  booksListed)
         }
-    }, [])
+    }, [books])
     return (
         <div>
             <h2 className="text-4xl text-center bg-base-200 py-6 rounded-xl font-bold">Books: {booksListed.length}</h2>
+            {/* <div>
+                {
+                    booksListed.map(book => <li key={book.bookId}>{book.bookName}</li>)
+                }
+            </div> */}
 
             <div className="text-center m-8  ">
                 <details className="dropdown">
@@ -47,23 +53,25 @@ const ListedToPage = () => {
 
             {/* tabs */}
             <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start text-black flex-nowrap">
-                <Link 
-                to={''}
+                <Link
+                    to={''}
                     onClick={() => setTabIndex(0)}
                     className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border border-b-0 font-medium' : 'border-b'} rounded-t-lg border-gray-400`}>
-                   
+
                     <span>Read Books</span>
                 </Link>
-                <Link 
-                to={`wishlist`}
+                <Link
+                    to={`wishlist`}
                     onClick={() => setTabIndex(1)}
                     className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 1 ? 'border border-b-0 font-medium' : 'border-b'} rounded-t-lg border-gray-400`}>
-                   
+
                     <span>Wishlist Books</span>
                 </Link>
 
             </div>
             <Outlet></Outlet>
+
+            
 
         </div>
     );
