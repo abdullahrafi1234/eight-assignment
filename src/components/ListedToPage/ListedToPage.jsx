@@ -32,7 +32,7 @@ const ListedToPage = () => {
         }
     }, [books])
     return (
-        <div>
+        <div className="mt-8">
             <h2 className="text-4xl text-center bg-base-200 py-6 rounded-xl font-bold">Books: {booksListed.length}</h2>
             {/* <div>
                 {
@@ -52,7 +52,7 @@ const ListedToPage = () => {
 
 
             {/* tabs */}
-            <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start text-black flex-nowrap">
+            <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-start text-black flex-nowrap">
                 <Link
                     to={''}
                     onClick={() => setTabIndex(0)}
